@@ -1,0 +1,9 @@
+#!/bin/sh
+
+rm -rf /run/dbus/pid
+
+dbus-daemon --system
+
+dbus-launch 
+
+DISPLAY=:1 $HOME/.vnc/xstartup
